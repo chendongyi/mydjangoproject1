@@ -1,0 +1,7 @@
+{% for item in List %}
+    {{ item }},
+    {% if not forloop.last %},{% endif %}
+{% endfor %}
+
+{{ request.user }}
+<a href="{{ request.path }}?{{ request.GET.urlencode }}&delete=1">当前网址加参数 delete</a>
